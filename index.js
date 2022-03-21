@@ -3,6 +3,8 @@ showNotes();
 
 let addBtn = document.getElementById("addBtn");
 
+
+// ----------Add Notes---------
 addBtn.addEventListener("click", function (e) {
   let addTxt = document.getElementById("addTxt");
   let notes = localStorage.getItem("notes");
@@ -43,6 +45,8 @@ function showNotes() {
   }
 }
 
+// ----------Delete Notes---------
+
 function deleteNote(index) {
   let notes = localStorage.getItem("notes");
   if (notes == null) {
@@ -55,3 +59,20 @@ function deleteNote(index) {
   showNotes();
 
 }
+
+// ----------Search Notes---------
+let search = document.getElementById('search');
+search.addEventListener('input', function(){
+   let inputVal = search.value.toLowerCase();
+   let noteCard = document.getElementsByClassName('notes')
+   Array.from(noteCard).forEach(function(element){
+    let cardTxt = element.getElementsByTagName("p")[0].innerText.toLowerCase();
+    if (cardTxt.includes(inputVal)){
+        element.style.display = "block";
+    }
+    else{
+     element.style.display = "none";
+    }
+   }); 
+});
+

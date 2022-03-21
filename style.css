@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     background-color: #008f7a;
     color: #fff;
     padding: 0.5rem 1rem;
@@ -16,11 +17,15 @@
     font-size: 40px;
 }
 .search input{
-    background-color: #fbeaff;
+    background-color: #c4fcef;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
-    color: #fff;
+}
+.search input:focus{
+    outline: none;
+    /* color: #000; */
+    font-weight: 700;
 }
 .container{
     width: 60%;
@@ -29,6 +34,7 @@
 .enter-notes{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 15px;
     padding: 5px 10px;
     margin: 20px 0;
@@ -52,6 +58,7 @@
    border-radius: 5px;
    color: #fff;
    font-size: 20px;
+   margin-bottom: 10px;
 }
 .showNotes{
     display: flex;
@@ -66,13 +73,18 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 200px;
+    width: 180px;
     padding: 5px 10px;
     margin: 20px 0;
     border: 1px solid #ccc;
     border-radius: 10px; 
+    background-color: #c4fcef;
 }
 .notes .btn{
     width: 60px;
     font-size: 12px;
+}
+.greeting{
+    font-size: 50px;
+    text-align: center;
 }
