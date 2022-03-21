@@ -48,7 +48,11 @@
     /* height: 150px; */
     border: 1px solid #ccc;
     border-radius: 10px; 
-
+    padding: 5px 10px;
+    font-size: 16px;
+}
+.enter-notes textarea:focus{
+    outline: 1px solid #c4fcef;
 }
 .btn{
    width: 120px;
