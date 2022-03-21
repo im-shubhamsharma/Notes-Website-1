@@ -3,7 +3,6 @@ showNotes();
 
 let addBtn = document.getElementById("addBtn");
 
-
 addBtn.addEventListener("click", function (e) {
   let addTxt = document.getElementById("addTxt");
   let notes = localStorage.getItem("notes");
@@ -39,8 +38,20 @@ function showNotes() {
   let notesElm = document.getElementById("notes");
   if (notesObj.length != 0) {
     notesElm.innerHTML = html;
-  }
-  else{
+  } else {
     notesElm.innerHTML = `Nothing to show! Please Enter a note using 'Add Note' option above`;
   }
+}
+
+function deleteNote(index) {
+  let notes = localStorage.getItem("notes");
+  if (notes == null) {
+    notesObj = [];
+  } else {
+    notesObj = JSON.parse(notes);
+  }
+  notesObj.splice(index, 1);
+  localStorage.setItem("notes", JSON.stringify(notesObj));
+  showNotes();
+
 }
