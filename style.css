@@ -25,7 +25,7 @@
 .search input:focus{
     outline: none;
     /* color: #000; */
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 .container{
     width: 60%;
@@ -37,7 +37,6 @@
     flex-wrap: wrap;
     gap: 15px;
     padding: 5px 10px;
-    margin: 20px 0;
     border: 1px solid #ccc;
     border-radius: 10px; 
 }
